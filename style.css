@@ -6,7 +6,6 @@ body {
     height: 100vh;
     flex-direction:column;
     margin: 0;
-    padding:0;
     background:linear-gradient(45deg,#011e2c,#012529);
     overflow:hidden;
     }

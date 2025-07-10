@@ -56,14 +56,14 @@ function initGame() {
                 clearInterval(timerInterval);
                 gameOverScreen.style.display = 'flex';
                 if (isSoundOn) gameOverSound.play();
-                sdk.showBanner();
+                
             }
         }
     }, 1000);
     addTile();
     addTile();
     renderBoard();
-    sdk.showBanner();
+    
 }
 
 function renderBoard() {
@@ -178,12 +178,12 @@ function move(direction) {
         if (!hasWon && checkWin()) {
             hasWon = true;
             gameWonScreen.style.display = 'flex';
-            sdk.showBanner();
+            
         } else if (checkGameOver()) {
             clearInterval(timerInterval);
             gameOverScreen.style.display = 'flex';
             if (isSoundOn) gameOverSound.play();
-            sdk.showBanner();
+           
         }
     }
 }
@@ -199,13 +199,13 @@ function continueGame() {
 function pauseGame() {
     isPaused = true;
     if (isSoundOn) bgMusic.pause();
-    console.log("Game paused by GameMonetize SDK");
+    
 }
 
 function resumeGame() {
     isPaused = false;
     if (isSoundOn) bgMusic.play();
-    console.log("Game resumed by GameMonetize SDK");
+    c
 }
 
 // Keyboard controls

@@ -6,38 +6,25 @@
     <meta name="viewport" content= "width=device-width, user-scalable=no">
     <title>Qolor 2048</title>
     <link rel="stylesheet" href="style.css">
-    <!-- GameMonetize SDK -->
-    <script type="text/javascript">
-        window.SDK_OPTIONS = {
-            gameId: "3e4hk4zpotozwuy9ehh5uy0xzeaabp3k",
-            onEvent: function (a) {
-                switch (a.name) {
-                    case "SDK_GAME_PAUSE":
-                        pauseGame(); // Defined in game.js
-                        break;
-                    case "SDK_GAME_START":
-                        resumeGame(); // Defined in game.js
-                        break;
-                    case "SDK_READY":
-                        console.log("GameMonetize SDK is ready");
-                        break;
-                }
-            }
-        };
-        (function (a, b, c) {
-            var d = a.getElementsByTagName(b)[0];
-            a.getElementById(c) || (a = a.createElement(b), a.id = c, a.src = "https://api.gamemonetize.com/sdk.js", d.parentNode.insertBefore(a, d));
-        })(document, "script", "gamemonetize-sdk");
-    </script>
 </head>
 <body>
+    
+<script type="module" src="https://securepubads.shareus.io/scripts/tag/js/gpt.js" ></script>
+
+<div id="shareus-admanager-5468115941-hWIK6RmqUr">
+ <script>
+     window._shareustag = window._shareustag || {cmd:[]};
+    _shareustag.cmd.push(function() {
+      var slot1 = _shareustag.defineSlot('/shareus-admanager/5468115941/hWIK6RmqUr/LEader', [[728,90]],'shareus-admanager-5468115941-hWIK6RmqUr');
+    });
+  </script>
+</div>
+
+
     <!-- Home Page -->
-
-
-
     <div class="home-page" id="home-page">
         <h1>Qolor 2048</h1>
-        <button onclick="startGame(); sdk.showBanner();">Play</button>
+        <button onclick="startGame();">Play</button>
         <button id="sound-toggle" onclick="toggleSound()">Sound On</button>
     </div>
 
@@ -49,19 +36,18 @@
             <div class="timer">Time Left: <span id="timer">30</span>s</div>
         </div>
         <div class="grid" id="grid"></div>
-        <button onclick="resetGame(); sdk.showBanner()"; >Reset Game</button>
+        <button onclick="resetGame();" >Reset Game</button>
         <div class="game-over" id="game-over">
             <p>Game Over!</p>
-            <button onclick="resetGame(); sdk.showBanner();">Play Again</button>
-            <button onclick="sdk.showBanner();"><a href="openapp.html">Submit Score</a></button>
+            <button onclick="resetGame();">Play Again</button>
+            <button ><a href="https://arolinks.com/3g9">More Games</a></button>
         </div>
         <div class="game-won" id="game-won">
             <p>You Win! (2048 Reached)</p>
-            <button onclick="continueGame();sdk.showBanner();">Keep Going</button>
-            <button onclick="resetGame();sdk.showBanner();">New Game</button>
+            <button onclick="continueGame();">Keep Going</button>
+            <button onclick="resetGame();">New Game</button>
         </div>
     </div>
-
 
     <!-- Audio Elements -->
     <audio id="bg-music" loop>
